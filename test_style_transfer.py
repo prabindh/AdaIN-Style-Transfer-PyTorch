@@ -19,7 +19,7 @@ class AlphaRange(object):
 parser = argparse.ArgumentParser()
 parser.add_argument('--input_image', type=str, help='test image')
 parser.add_argument('--style_image', type=str, help='style image')
-parser.add_argument('--weight', type=str, help='decoder weight file')
+parser.add_argument('--weight_file', type=str, help='decoder weight file')
 parser.add_argument('--alpha', type=float, default=1.0, choices=[AlphaRange(0.0, 1.0)], help='Level of style transfer, value between 0 and 1')
 parser.add_argument('--cuda', action='store_true', help='Using GPU to train')
 

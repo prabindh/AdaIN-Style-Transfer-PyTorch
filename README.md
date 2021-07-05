@@ -40,15 +40,15 @@ optional arguments:
 
 ### Testing
 
-Download the [decoder weight](https://drive.google.com/file/d/18JpLtMOapA-vwBz-LRomyTl24A9GwhTF/view?usp=sharing).
+Download the [encoder and decoder weights](https://drive.google.com/file/d/16FkLfRa2drPxe8z2GmmXqMNPu5l3niQ4/view?usp=sharing).
 
-Run the script test_image.py
+Run the script test_style_transfer.py
 
 ```
-$ python test_image.py --input_image $IMG --style_image $STYLE --weight $WEIGHT --cuda
+$ python test_style_transfer.py --input_image $IMG --style_image $STYLE --weight_file $WEIGHT --cuda
 
 usage: test_style_transfer.py [-h] [--input_image INPUT_IMAGE]
-                              [--style_image STYLE_IMAGE] [--weight WEIGHT]
+                              [--style_image STYLE_IMAGE] [--weight_file WEIGHT]
                               [--alpha {Alpha Range}] [--cuda]
 
 optional arguments:
@@ -57,11 +57,16 @@ optional arguments:
                         test image
   --style_image STYLE_IMAGE
                         style image
-  --weight WEIGHT       decoder weight file
+  --weight_file WEIGHT       decoder weight file
   --alpha {Alpha Range}
                         Level of style transfer, value between 0 and 1
   --cuda                Using GPU to train
 ```
+
+NOTE:
+-----
+- On windows, the path to imagefile has to be '/' form, ex c:/abcv/image.png
+
 
 Useful Tool
 ----------------------------
